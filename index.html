@@ -6,7 +6,7 @@
   <title>Inscripción | Escuela de Arquitectura UJMD</title>
   <meta name="description" content="Información necesaria para tu inscripción de este ciclo — Escuela de Arquitectura, Universidad Dr. José Matías Delgado.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,12 +17,10 @@
 
   <header class="header">
     <nav class="nav">
-      <a href="index.html" class="logo">
-        <span class="logo-marca">AR</span>
-        <span class="logo-texto">
-          <strong>Inscripción</strong>
-          <span>Escuela de Arquitectura UJMD</span>
-        </span>
+      <a href="index.html" class="logo" aria-label="EArq — Escuela de Arquitectura UJMD">
+        <span class="logo-earq"><span class="logo-e">e</span>arq</span>
+        <span class="logo-sep"></span>
+        <span class="logo-desc">escuela de<br>arquitectura</span>
       </a>
       <button class="btn-menu" aria-label="Abrir menú">☰</button>
       <ul class="menu">
@@ -30,7 +28,7 @@
         <li><a href="recomendaciones.html">Recomendaciones</a></li>
         <li><a href="instrucciones.html">Instrucciones</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="mailto:arquitectura@ujmd.edu.sv">Contacto</a></li>
+        <li><a href="https://www.ujmd.edu.sv/" target="_blank" rel="noopener" class="externo">UJMD ↗</a></li>
       </ul>
     </nav>
   </header>
@@ -41,13 +39,48 @@
       <h1>Todo lo que necesitas para tu inscripción</h1>
       <p>En este sitio encontrarás la información necesaria para tu inscripción de este ciclo. Te recomendamos comenzar verificando los horarios y grupos disponibles.</p>
       <div class="hero-botones">
-        <a class="btn btn-rojo" href="https://drive.google.com/open?id=1hYybfgr_sa6sFOh1pNgrKb1XfVoq0A5B" target="_blank" rel="noopener">Ver horarios 2018/2023</a>
+        <a class="btn btn-amarillo" href="https://drive.google.com/open?id=1923eWimsNDPZbsRJVhP5gRsiucGjTOb5" target="_blank" rel="noopener">Ver horarios 2018/2023</a>
         <a class="btn btn-claro" href="instrucciones.html">Cómo inscribirse en línea</a>
       </div>
     </div>
   </section>
 
   <main>
+    <!-- Aviso 3.ª matrícula -->
+    <section class="seccion" style="padding-bottom:0;">
+      <div class="contenedor">
+        <div class="alerta alerta-amarilla" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:0;">
+          <div style="flex:1; min-width:260px;">
+            <strong>¿Inscribirás asignaturas en 3.ª matrícula?</strong>
+            <p>Descarga la carta de solicitud, llénala y envíala en formato PDF a <a href="mailto:arquitectura@ujmd.edu.sv">arquitectura@ujmd.edu.sv</a> a más tardar el miércoles 9 de julio. Sin esta autorización no podrás inscribir.</p>
+          </div>
+          <a class="btn btn-oscuro" href="https://docs.google.com/document/d/1ooplPmo3fWcnGAQLoOipXJLfIvERY1R8" target="_blank" rel="noopener">Descargar formato</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fechas clave -->
+    <section class="seccion" style="padding-bottom:0;">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Fechas clave del ciclo 02</h2>
+        <div class="linea-acento"></div>
+        <div class="fechas">
+          <div class="fecha-item">
+            <div class="fecha-dia">Miércoles 9 de julio</div>
+            <p>Fecha límite para presentar la solicitud de autorización de 3.ª matrícula.</p>
+          </div>
+          <div class="fecha-item">
+            <div class="fecha-dia">20, 21 y 22 de agosto</div>
+            <p>Período de retiro y adición. Plazo para inscribir la asignatura que requiere UV adicional (2.ª matrícula).</p>
+          </div>
+          <div class="fecha-item">
+            <div class="fecha-dia">Tu segmento</div>
+            <p>Consulta la fecha en que te corresponde inscribir en los <a href="https://www.ujmd.edu.sv/inscripcion-horario/arquitectura/" target="_blank" rel="noopener">horarios de inscripción</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Accesos rápidos -->
     <section class="seccion">
       <div class="contenedor">
@@ -58,25 +91,25 @@
             <div class="icono">📝</div>
             <h3>Instrucciones para inscripción en línea</h3>
             <p>Paso a paso para inscribir tus asignaturas a través de la UVirtual.</p>
-            <span class="enlace" style="color:var(--rojo); font-weight:600;">Ver instrucciones →</span>
+            <span class="enlace">Ver instrucciones →</span>
           </a>
           <a class="tarjeta tarjeta-enlace" href="https://www.ujmd.edu.sv/inscripcion-horario/arquitectura/" target="_blank" rel="noopener">
             <div class="icono">🕑</div>
             <h3>Horarios de inscripción</h3>
             <p>Consulta el segmento y la fecha en que te corresponde inscribir.</p>
-            <span class="enlace" style="color:var(--rojo); font-weight:600;">Consultar →</span>
+            <span class="enlace">Consultar →</span>
           </a>
           <a class="tarjeta tarjeta-enlace" href="https://drive.google.com/open?id=1ztWR73ITUoLOF77Rh7TLZA5f2QSHo3m7" target="_blank" rel="noopener">
             <div class="icono">📅</div>
             <h3>Calendario académico</h3>
             <p>Fechas importantes del ciclo académico en curso.</p>
-            <span class="enlace" style="color:var(--rojo); font-weight:600;">Descargar →</span>
+            <span class="enlace">Descargar →</span>
           </a>
           <a class="tarjeta tarjeta-enlace" href="recomendaciones.html">
             <div class="icono">💡</div>
-            <h3>Recomendaciones ciclo 01</h3>
+            <h3>Recomendaciones ciclo 02</h3>
             <p>Consideraciones de asignaturas y recomendaciones antes de inscribir.</p>
-            <span class="enlace" style="color:var(--rojo); font-weight:600;">Leer más →</span>
+            <span class="enlace">Leer más →</span>
           </a>
         </div>
         <p class="nota">* El Plan 2023 corresponde a Nuevo Ingreso, Ingreso por Equivalencias, Reingreso y Cambio de Carrera.</p>
@@ -88,15 +121,15 @@
       <div class="contenedor">
         <h2 class="seccion-titulo">Aclaraciones sobre los horarios</h2>
         <div class="linea-acento"></div>
-        <div class="alerta alerta-roja">
+        <div class="alerta alerta-amarilla">
           <strong>No se permiten los cambios de grupo</strong>
           <p>Al finalizar tu inscripción en línea no podrás modificar los grupos seleccionados.</p>
         </div>
-        <div class="alerta alerta-azul">
+        <div class="alerta alerta-gris">
           <strong>Semipresencialidad</strong>
           <p>La mayoría de asignaturas tendrán horas presenciales y no presenciales repartidas durante la semana. Deberás asistir al campus para las horas presenciales; las no presenciales se desarrollan de manera asíncrona en Google Classroom en el horario designado.</p>
         </div>
-        <div class="alerta alerta-ambar">
+        <div class="alerta alerta-gris">
           <strong>Asignaturas 100% virtuales</strong>
           <p>Solo algunas asignaturas permanecerán 100% virtuales, con balance entre horas sincrónicas y asincrónicas. Para estas no te presentarás al campus universitario.</p>
         </div>
@@ -159,6 +192,22 @@
       </div>
     </section>
 
+    <!-- Enlaces institucionales -->
+    <section class="seccion" style="padding-top:0;">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Enlaces institucionales UJMD</h2>
+        <p class="seccion-sub">Recursos de la Universidad Dr. José Matías Delgado que pueden ayudarte durante tu proceso:</p>
+        <div class="enlaces-ujmd">
+          <a class="enlace-ujmd" href="https://www.ujmd.edu.sv/admisiones/" target="_blank" rel="noopener">Admisiones</a>
+          <a class="enlace-ujmd" href="https://www.ujmd.edu.sv/aranceles/" target="_blank" rel="noopener">Aranceles</a>
+          <a class="enlace-ujmd" href="https://www.ujmd.edu.sv/calendario/" target="_blank" rel="noopener">Calendario institucional</a>
+          <a class="enlace-ujmd" href="https://www.ujmd.edu.sv/avisos/" target="_blank" rel="noopener">Avisos UJMD</a>
+          <a class="enlace-ujmd" href="https://www.ujmd.edu.sv/facultades/escuela-de-arquitectura/" target="_blank" rel="noopener">Escuela de Arquitectura</a>
+          <a class="enlace-ujmd" href="http://uvirtual.ujmd.edu.sv/" target="_blank" rel="noopener">UVirtual</a>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
     <section class="seccion" style="padding-top:0;">
       <div class="contenedor">
@@ -185,17 +234,27 @@
           <h4>Navegación</h4>
           <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="recomendaciones.html">Recomendaciones ciclo 01</a></li>
+            <li><a href="recomendaciones.html">Recomendaciones ciclo 02</a></li>
             <li><a href="instrucciones.html">Instrucciones en línea</a></li>
             <li><a href="faq.html">Preguntas frecuentes</a></li>
           </ul>
         </div>
         <div>
-          <h4>Contacto y enlaces</h4>
+          <h4>UJMD</h4>
+          <ul>
+            <li><a href="https://www.ujmd.edu.sv/" target="_blank" rel="noopener">Sitio institucional</a></li>
+            <li><a href="https://www.ujmd.edu.sv/admisiones/" target="_blank" rel="noopener">Admisiones</a></li>
+            <li><a href="https://www.ujmd.edu.sv/aranceles/" target="_blank" rel="noopener">Aranceles</a></li>
+            <li><a href="https://www.ujmd.edu.sv/calendario/" target="_blank" rel="noopener">Calendario</a></li>
+            <li><a href="https://www.ujmd.edu.sv/avisos/" target="_blank" rel="noopener">Avisos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
           <ul>
             <li><a href="mailto:arquitectura@ujmd.edu.sv">arquitectura@ujmd.edu.sv</a></li>
             <li><a href="tel:+50322129400">2212-9400 ext. 124</a></li>
-            <li><a href="https://www.ujmd.edu.sv/facultades/escuela-de-arquitectura/" target="_blank" rel="noopener">Sitio de la Escuela de Arquitectura</a></li>
+            <li><a href="https://www.ujmd.edu.sv/facultades/escuela-de-arquitectura/" target="_blank" rel="noopener">Escuela de Arquitectura</a></li>
             <li><a href="http://uvirtual.ujmd.edu.sv/" target="_blank" rel="noopener">UVirtual</a></li>
           </ul>
         </div>
@@ -203,6 +262,8 @@
       <div class="footer-legal">© Escuela de Arquitectura UJMD — Sitio informativo de inscripción</div>
     </div>
   </footer>
+
+  <a class="btn-flotante" href="mailto:arquitectura@ujmd.edu.sv" title="Escríbenos: arquitectura@ujmd.edu.sv" aria-label="Contacto por correo">✉</a>
 
   <script src="script.js"></script>
 </body>

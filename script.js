@@ -5,6 +5,23 @@ if (btnMenu && menu) {
   btnMenu.addEventListener('click', () => menu.classList.toggle('abierto'));
 }
 
+// Buscador FAQ
+const buscadorFaq = document.getElementById('buscador-faq');
+if (buscadorFaq) {
+  const items = document.querySelectorAll('.acordeon-item');
+  const sinResultados = document.getElementById('sin-resultados');
+  buscadorFaq.addEventListener('input', () => {
+    const consulta = buscadorFaq.value.trim().toLowerCase();
+    let visibles = 0;
+    items.forEach((item) => {
+      const coincide = item.textContent.toLowerCase().includes(consulta);
+      item.style.display = coincide ? '' : 'none';
+      if (coincide) visibles++;
+    });
+    if (sinResultados) sinResultados.style.display = visibles ? 'none' : 'block';
+  });
+}
+
 // Acordeón FAQ
 document.querySelectorAll('.acordeon-boton').forEach((boton) => {
   boton.addEventListener('click', () => {

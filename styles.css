@@ -1,20 +1,22 @@
 /* ============================================
    Sitio de Inscripción — Escuela de Arquitectura UJMD
-   Hoja de estilos compartida
+   Paleta EArq: gris oscuro · blanco · amarillo
    ============================================ */
 
 :root {
-  --rojo: #b3282d;
-  --rojo-oscuro: #8e1f23;
-  --azul: #1d2d44;
-  --azul-claro: #3e5c76;
-  --fondo: #f7f8fa;
+  --gris: #2d2d2d;
+  --gris-profundo: #1c1c1c;
+  --gris-medio: #4a4a4a;
+  --amarillo: #ffc20e;
+  --amarillo-oscuro: #e5ac00;
+  --amarillo-suave: #fff7dd;
+  --fondo: #f6f6f4;
   --blanco: #ffffff;
-  --texto: #2b2f36;
-  --texto-suave: #5c6470;
-  --borde: #e4e7ec;
-  --sombra: 0 2px 12px rgba(29, 45, 68, 0.08);
-  --sombra-hover: 0 8px 24px rgba(29, 45, 68, 0.14);
+  --texto: #2d2d2d;
+  --texto-suave: #61646b;
+  --borde: #e6e6e2;
+  --sombra: 0 2px 12px rgba(28, 28, 28, 0.08);
+  --sombra-hover: 0 8px 24px rgba(28, 28, 28, 0.16);
   --radio: 12px;
 }
 
@@ -31,7 +33,7 @@ body {
 
 img { max-width: 100%; display: block; }
 
-a { color: var(--rojo); }
+a { color: var(--gris); }
 
 .contenedor {
   max-width: 1080px;
@@ -41,14 +43,14 @@ a { color: var(--rojo); }
 
 /* ---------- Barra superior de aviso ---------- */
 .aviso-superior {
-  background: var(--azul);
-  color: #dbe2ea;
+  background: var(--amarillo);
+  color: var(--gris-profundo);
   font-size: 0.85rem;
+  font-weight: 500;
   text-align: center;
   padding: 8px 16px;
 }
-.aviso-superior a { color: #ffd9db; font-weight: 600; text-decoration: none; }
-.aviso-superior a:hover { text-decoration: underline; }
+.aviso-superior a { color: var(--gris-profundo); font-weight: 700; text-decoration: underline; }
 
 /* ---------- Header / Navegación ---------- */
 .header {
@@ -62,7 +64,7 @@ a { color: var(--rojo); }
 .nav {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 14px 24px;
+  padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -71,26 +73,32 @@ a { color: var(--rojo); }
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
-  color: var(--azul);
+  color: var(--gris);
 }
-.logo-marca {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--rojo), var(--rojo-oscuro));
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 1.05rem;
-  letter-spacing: 0.5px;
+.logo-earq {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  color: #3d4148;
+  letter-spacing: -0.03em;
+}
+.logo-e { color: var(--amarillo); }
+.logo-sep {
+  width: 2px;
+  height: 40px;
+  background: #c9c9c5;
   flex-shrink: 0;
 }
-.logo-texto strong { display: block; font-size: 1.05rem; line-height: 1.2; }
-.logo-texto span { font-size: 0.75rem; color: var(--texto-suave); }
+.logo-desc {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #54585e;
+  line-height: 1.3;
+}
 
 .menu {
   display: flex;
@@ -108,8 +116,9 @@ a { color: var(--rojo); }
   font-weight: 500;
   transition: background 0.15s, color 0.15s;
 }
-.menu a:hover { background: #f1f3f6; }
-.menu a.activo { background: var(--rojo); color: #fff; }
+.menu a:hover { background: var(--amarillo-suave); }
+.menu a.activo { background: var(--amarillo); color: var(--gris-profundo); font-weight: 700; }
+.menu a.externo { color: var(--texto-suave); }
 
 .btn-menu {
   display: none;
@@ -119,12 +128,12 @@ a { color: var(--rojo); }
   padding: 8px 10px;
   cursor: pointer;
   font-size: 1.2rem;
-  color: var(--azul);
+  color: var(--gris);
 }
 
 /* ---------- Hero ---------- */
 .hero {
-  background: linear-gradient(135deg, var(--azul) 0%, var(--azul-claro) 100%);
+  background: linear-gradient(135deg, var(--gris) 0%, var(--gris-profundo) 100%);
   color: #fff;
   padding: 72px 24px;
   position: relative;
@@ -138,23 +147,31 @@ a { color: var(--rojo); }
   width: 340px;
   height: 340px;
   border-radius: 50%;
-  background: rgba(179, 40, 45, 0.35);
+  background: rgba(255, 194, 14, 0.16);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 6px;
+  background: var(--amarillo);
 }
 .hero-contenido { max-width: 1080px; margin: 0 auto; position: relative; z-index: 1; }
 .hero .etiqueta {
   display: inline-block;
-  background: rgba(255,255,255,0.14);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: var(--amarillo);
+  color: var(--gris-profundo);
   border-radius: 999px;
   padding: 5px 16px;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 .hero h1 { font-size: clamp(1.9rem, 4.5vw, 3rem); line-height: 1.15; margin-bottom: 16px; }
-.hero p { max-width: 620px; font-size: 1.05rem; color: #dbe2ea; margin-bottom: 28px; }
+.hero p { max-width: 620px; font-size: 1.05rem; color: #cfcfcb; margin-bottom: 28px; }
+.hero p a { color: var(--amarillo); }
 .hero-botones { display: flex; gap: 12px; flex-wrap: wrap; }
 
 /* Hero compacto para páginas internas */
@@ -167,26 +184,26 @@ a { color: var(--rojo); }
   padding: 12px 24px;
   border-radius: 10px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
   transition: transform 0.15s, box-shadow 0.15s;
 }
 .btn:hover { transform: translateY(-2px); box-shadow: var(--sombra-hover); }
-.btn-rojo { background: var(--rojo); color: #fff; }
-.btn-claro { background: rgba(255,255,255,0.14); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
-.btn-contorno { border: 2px solid var(--rojo); color: var(--rojo); }
+.btn-amarillo { background: var(--amarillo); color: var(--gris-profundo); }
+.btn-claro { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+.btn-oscuro { background: var(--gris); color: #fff; }
 
 /* ---------- Secciones ---------- */
 .seccion { padding: 56px 0; }
 .seccion-titulo {
   font-size: 1.6rem;
-  color: var(--azul);
+  color: var(--gris);
   margin-bottom: 8px;
 }
 .seccion-sub { color: var(--texto-suave); margin-bottom: 32px; max-width: 680px; }
 .linea-acento {
   width: 56px; height: 4px;
-  background: var(--rojo);
+  background: var(--amarillo);
   border-radius: 2px;
   margin: 12px 0 24px;
 }
@@ -200,6 +217,7 @@ a { color: var(--rojo); }
 .tarjeta {
   background: var(--blanco);
   border: 1px solid var(--borde);
+  border-top: 4px solid var(--amarillo);
   border-radius: var(--radio);
   padding: 26px;
   box-shadow: var(--sombra);
@@ -209,18 +227,16 @@ a { color: var(--rojo); }
 .tarjeta .icono {
   width: 46px; height: 46px;
   border-radius: 10px;
-  background: #fdeeee;
-  color: var(--rojo);
+  background: var(--amarillo-suave);
   display: flex; align-items: center; justify-content: center;
   font-size: 1.3rem;
   margin-bottom: 14px;
 }
-.tarjeta h3 { color: var(--azul); font-size: 1.05rem; margin-bottom: 8px; }
+.tarjeta h3 { color: var(--gris); font-size: 1.05rem; margin-bottom: 8px; }
 .tarjeta p { font-size: 0.92rem; color: var(--texto-suave); margin-bottom: 14px; }
-.tarjeta a.enlace { font-weight: 600; text-decoration: none; font-size: 0.92rem; }
-.tarjeta a.enlace:hover { text-decoration: underline; }
+.tarjeta .enlace { font-weight: 700; text-decoration: none; font-size: 0.92rem; color: var(--amarillo-oscuro); }
+.tarjeta .enlace:hover { text-decoration: underline; }
 
-/* Tarjeta destacada como enlace completo */
 a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
 
 /* ---------- Alertas ---------- */
@@ -232,13 +248,12 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
   background: var(--blanco);
   box-shadow: var(--sombra);
 }
-.alerta strong { display: block; margin-bottom: 4px; color: var(--azul); }
+.alerta strong { display: block; margin-bottom: 4px; color: var(--gris); }
 .alerta p { font-size: 0.94rem; color: var(--texto-suave); }
-.alerta-roja { border-color: var(--rojo); }
-.alerta-azul { border-color: var(--azul-claro); }
-.alerta-ambar { border-color: #e0a100; }
+.alerta-amarilla { border-color: var(--amarillo); }
+.alerta-gris { border-color: var(--gris-medio); }
 
-/* ---------- Listas con viñetas personalizadas ---------- */
+/* ---------- Listas ---------- */
 .lista-check { list-style: none; }
 .lista-check li {
   padding: 10px 0 10px 34px;
@@ -252,14 +267,13 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
   left: 0; top: 10px;
   width: 22px; height: 22px;
   border-radius: 50%;
-  background: #eaf3ec;
-  color: #2e7d43;
+  background: var(--amarillo);
+  color: var(--gris-profundo);
   font-size: 0.8rem;
   display: flex; align-items: center; justify-content: center;
   font-weight: 700;
 }
 
-/* Lista numerada estilizada */
 .lista-numerada { list-style: none; counter-reset: paso; }
 .lista-numerada li {
   counter-increment: paso;
@@ -274,8 +288,8 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
   left: 0; top: 12px;
   width: 34px; height: 34px;
   border-radius: 50%;
-  background: var(--azul);
-  color: #fff;
+  background: var(--gris);
+  color: var(--amarillo);
   font-weight: 700;
   display: flex; align-items: center; justify-content: center;
   font-size: 0.9rem;
@@ -290,6 +304,7 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
   box-shadow: var(--sombra);
   overflow: hidden;
 }
+.acordeon-item.abierto { border-left: 5px solid var(--amarillo); }
 .acordeon-boton {
   width: 100%;
   background: none;
@@ -298,7 +313,7 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
   padding: 18px 22px;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--azul);
+  color: var(--gris);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -309,7 +324,7 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
 .acordeon-boton::after {
   content: "+";
   font-size: 1.4rem;
-  color: var(--rojo);
+  color: var(--amarillo-oscuro);
   transition: transform 0.2s;
   flex-shrink: 0;
 }
@@ -325,7 +340,7 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
   font-size: 0.95rem;
 }
 
-/* ---------- Bloque de definiciones (modalidades) ---------- */
+/* ---------- Definiciones (modalidades) ---------- */
 .definiciones { display: grid; gap: 16px; }
 .definicion {
   background: var(--blanco);
@@ -336,52 +351,151 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
 }
 .definicion dt {
   font-weight: 700;
-  color: var(--rojo);
+  color: var(--gris);
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.5px;
   margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--amarillo);
+  display: inline-block;
 }
 .definicion dd { color: var(--texto-suave); font-size: 0.95rem; }
 
+/* ---------- Enlaces institucionales UJMD ---------- */
+.enlaces-ujmd {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+.enlace-ujmd {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: var(--gris);
+  font-weight: 600;
+  font-size: 0.92rem;
+  box-shadow: var(--sombra);
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+.enlace-ujmd:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-hover);
+  border-color: var(--amarillo);
+}
+.enlace-ujmd::before { content: "↗"; color: var(--amarillo-oscuro); font-weight: 700; }
+
 /* ---------- CTA final ---------- */
 .cta {
-  background: linear-gradient(135deg, var(--rojo) 0%, var(--rojo-oscuro) 100%);
+  background: var(--amarillo);
   border-radius: 16px;
-  color: #fff;
+  color: var(--gris-profundo);
   padding: 44px 36px;
   text-align: center;
 }
 .cta h2 { font-size: 1.5rem; margin-bottom: 10px; }
-.cta p { color: #ffe3e4; margin-bottom: 24px; max-width: 560px; margin-left: auto; margin-right: auto; }
-.cta .btn { background: #fff; color: var(--rojo); }
+.cta p { color: #4d4325; margin-bottom: 24px; max-width: 560px; margin-left: auto; margin-right: auto; }
+.cta .btn { background: var(--gris-profundo); color: var(--amarillo); }
 
 /* ---------- Footer ---------- */
 .footer {
-  background: var(--azul);
-  color: #b9c4d2;
+  background: var(--gris-profundo);
+  color: #b8b8b4;
   margin-top: 56px;
   padding: 40px 0 24px;
   font-size: 0.9rem;
+  border-top: 6px solid var(--amarillo);
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 28px;
   margin-bottom: 28px;
 }
-.footer h4 { color: #fff; margin-bottom: 12px; font-size: 0.95rem; }
+.footer h4 { color: var(--amarillo); margin-bottom: 12px; font-size: 0.95rem; }
 .footer ul { list-style: none; }
 .footer li { margin-bottom: 8px; }
-.footer a { color: #b9c4d2; text-decoration: none; }
+.footer a { color: #b8b8b4; text-decoration: none; }
 .footer a:hover { color: #fff; text-decoration: underline; }
 .footer-legal {
   border-top: 1px solid rgba(255,255,255,0.12);
   padding-top: 18px;
   text-align: center;
   font-size: 0.8rem;
-  color: #8896a8;
+  color: #85857f;
 }
+
+/* ---------- Fechas clave ---------- */
+.fechas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.fecha-item {
+  background: var(--gris);
+  color: #fff;
+  border-radius: var(--radio);
+  padding: 24px;
+  border-bottom: 4px solid var(--amarillo);
+}
+.fecha-item .fecha-dia {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--amarillo);
+  margin-bottom: 6px;
+}
+.fecha-item p { color: #cfcfcb; font-size: 0.92rem; }
+.fecha-item a { color: var(--amarillo); }
+
+/* ---------- Buscador FAQ ---------- */
+.buscador { margin-bottom: 24px; }
+.buscador input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-shadow: var(--sombra);
+}
+.buscador input:focus {
+  outline: none;
+  border-color: var(--amarillo);
+  box-shadow: 0 0 0 3px rgba(255, 194, 14, 0.35);
+}
+.sin-resultados {
+  display: none;
+  color: var(--texto-suave);
+  font-style: italic;
+  padding: 12px 0;
+}
+
+/* ---------- Botón flotante de contacto ---------- */
+.btn-flotante {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--amarillo);
+  color: var(--gris-profundo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  z-index: 200;
+  transition: transform 0.15s;
+}
+.btn-flotante:hover { transform: scale(1.08); }
 
 /* ---------- Utilidades ---------- */
 .nota { font-size: 0.85rem; color: var(--texto-suave); font-style: italic; margin-top: 12px; }

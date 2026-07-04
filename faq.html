@@ -6,7 +6,7 @@
   <title>Preguntas frecuentes | Inscripción — Escuela de Arquitectura UJMD</title>
   <meta name="description" content="Respuestas a los problemas más comunes durante el proceso de inscripción.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,12 +17,10 @@
 
   <header class="header">
     <nav class="nav">
-      <a href="index.html" class="logo">
-        <span class="logo-marca">AR</span>
-        <span class="logo-texto">
-          <strong>Inscripción</strong>
-          <span>Escuela de Arquitectura UJMD</span>
-        </span>
+      <a href="index.html" class="logo" aria-label="EArq — Escuela de Arquitectura UJMD">
+        <span class="logo-earq"><span class="logo-e">e</span>arq</span>
+        <span class="logo-sep"></span>
+        <span class="logo-desc">escuela de<br>arquitectura</span>
       </a>
       <button class="btn-menu" aria-label="Abrir menú">☰</button>
       <ul class="menu">
@@ -30,7 +28,7 @@
         <li><a href="recomendaciones.html">Recomendaciones</a></li>
         <li><a href="instrucciones.html">Instrucciones</a></li>
         <li><a href="faq.html" class="activo">FAQ</a></li>
-        <li><a href="mailto:arquitectura@ujmd.edu.sv">Contacto</a></li>
+        <li><a href="https://www.ujmd.edu.sv/" target="_blank" rel="noopener" class="externo">UJMD ↗</a></li>
       </ul>
     </nav>
   </header>
@@ -46,6 +44,10 @@
   <main>
     <section class="seccion">
       <div class="contenedor">
+        <div class="buscador">
+          <input type="search" id="buscador-faq" placeholder="Busca tu problema, p. ej. «bloqueado», «insolvente», «grupo»…" aria-label="Buscar en preguntas frecuentes">
+        </div>
+        <p class="sin-resultados" id="sin-resultados">No se encontraron preguntas con ese término. Intenta con otra palabra o escríbenos a <a href="mailto:arquitectura@ujmd.edu.sv">arquitectura@ujmd.edu.sv</a>.</p>
         <div class="acordeon">
 
           <div class="acordeon-item">
@@ -123,17 +125,27 @@
           <h4>Navegación</h4>
           <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="recomendaciones.html">Recomendaciones ciclo 01</a></li>
+            <li><a href="recomendaciones.html">Recomendaciones ciclo 02</a></li>
             <li><a href="instrucciones.html">Instrucciones en línea</a></li>
             <li><a href="faq.html">Preguntas frecuentes</a></li>
           </ul>
         </div>
         <div>
-          <h4>Contacto y enlaces</h4>
+          <h4>UJMD</h4>
+          <ul>
+            <li><a href="https://www.ujmd.edu.sv/" target="_blank" rel="noopener">Sitio institucional</a></li>
+            <li><a href="https://www.ujmd.edu.sv/admisiones/" target="_blank" rel="noopener">Admisiones</a></li>
+            <li><a href="https://www.ujmd.edu.sv/aranceles/" target="_blank" rel="noopener">Aranceles</a></li>
+            <li><a href="https://www.ujmd.edu.sv/calendario/" target="_blank" rel="noopener">Calendario</a></li>
+            <li><a href="https://www.ujmd.edu.sv/avisos/" target="_blank" rel="noopener">Avisos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
           <ul>
             <li><a href="mailto:arquitectura@ujmd.edu.sv">arquitectura@ujmd.edu.sv</a></li>
             <li><a href="tel:+50322129400">2212-9400 ext. 124</a></li>
-            <li><a href="https://www.ujmd.edu.sv/facultades/escuela-de-arquitectura/" target="_blank" rel="noopener">Sitio de la Escuela de Arquitectura</a></li>
+            <li><a href="https://www.ujmd.edu.sv/facultades/escuela-de-arquitectura/" target="_blank" rel="noopener">Escuela de Arquitectura</a></li>
             <li><a href="http://uvirtual.ujmd.edu.sv/" target="_blank" rel="noopener">UVirtual</a></li>
           </ul>
         </div>
@@ -141,6 +153,8 @@
       <div class="footer-legal">© Escuela de Arquitectura UJMD — Sitio informativo de inscripción</div>
     </div>
   </footer>
+
+  <a class="btn-flotante" href="mailto:arquitectura@ujmd.edu.sv" title="Escríbenos: arquitectura@ujmd.edu.sv" aria-label="Contacto por correo">✉</a>
 
   <script src="script.js"></script>
 </body>
