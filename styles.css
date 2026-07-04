@@ -82,8 +82,8 @@ a { color: var(--gris); }
    Los porcentajes muestran exactamente esa área. */
 .logo-cut {
   position: relative;
-  width: 94px;
-  height: 28px;
+  width: 120px;
+  height: 36px;
   overflow: hidden;
   flex-shrink: 0;
 }
