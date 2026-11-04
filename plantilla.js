@@ -109,7 +109,23 @@
     }
   };
 
+  // ---------- Fotos en transparencia sobre el cintillo azul ----------
+  // Para cambiarlas, reemplaza los archivos en img/ o edita esta lista.
+  var FOTOS = ['img/foto-1-grupo.jpg', 'img/foto-2-taller.jpg', 'img/foto-3-visita.jpg', 'img/foto-4-taller.jpg'];
+
+  function ponerFotos() {
+    document.querySelectorAll('.hero').forEach(function (hero) {
+      if (hero.querySelector('.hero-fotos')) return;
+      hero.insertAdjacentHTML('afterbegin',
+        '<div class="hero-fotos" aria-hidden="true">' +
+          FOTOS.map(function (src) { return '<img src="' + src + '" alt="">'; }).join('') +
+        '</div>');
+    });
+  }
+
   function aplicarCiclo() {
+    ponerFotos();
+
     // Título y descripción de la pestaña: actualiza "ciclo NN" con el número de ciclo.js
     var desc = document.querySelector('meta[name="description"]');
     document.title = document.title.replace(/ciclo [\d-]+/i, 'ciclo ' + C.numero);

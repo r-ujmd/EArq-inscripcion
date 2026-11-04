@@ -15,6 +15,7 @@ Sitio estático (HTML/CSS/JS puro, sin compilación) con la paleta cromática co
 | `styles.css` | Todos los estilos (las páginas no llevan estilos en línea) |
 | `script.js` | Menú móvil, buscador y acordeón de la FAQ |
 | `logo-ujmd-earq.webp` | Logo UJMD — Escuela de Arquitectura |
+| `img/foto-*.jpg` | Fotos que aparecen en transparencia sobre el cintillo azul (800 px de ancho, JPG). La lista está en `FOTOS` dentro de `plantilla.js`. |
 
 ## Actualizar para un nuevo ciclo
 
@@ -61,5 +62,7 @@ Haz commit y push a `main`, o desde GitHub: Add file → Upload files → arrast
 ## Personalización
 
 - **Colores:** variables al inicio de `styles.css`, con la paleta cromática complementaria del Manual de Marca UJMD: Amarillo UJMD `#FFB600`, Azul Neón `#0043FF`, Zafiro `#3164B2`, Persia `#2F4BA3`, Cobalto `#2A3B89`, Navy `#182255`, Oxford `#161834` y Negro. Debajo están los tonos derivados para texto y fondos.
+- **Tipografía:** Montserrat en títulos y Red Hat Display en texto (Google Fonts), igual que ujmd.edu.sv.
+- **Fotos del cintillo:** para cambiarlas, reemplaza los archivos en `img/` con el mismo nombre (o edita la lista `FOTOS` en `plantilla.js`). Se muestran en escala de grises mezcladas con el azul; la intensidad se ajusta con `opacity` en `.hero-fotos` (`styles.css`).
 - **Logo:** `logo-ujmd-earq.webp`, recortado con la clase `.logo-cut` en `styles.css` (la imagen tiene márgenes transparentes; los porcentajes muestran solo el área visible, y en pantallas de 480 px o menos se reduce). Si cambias la imagen, ajusta esos valores y el nombre del archivo en `plantilla.js`.
 - El enlace “Listado de asignaturas y grupos” del sitio original estaba roto, por eso no aparece aquí.

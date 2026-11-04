@@ -22,9 +22,9 @@
   --texto-sobre-oscuro: #c9cfe6;            /* párrafos sobre Navy/Oxford */
   --texto-pie: #b3b9d6;                     /* enlaces del pie */
   --texto-pie-legal: #7f86a8;
-  --fondo: #f4f6fb;
+  --fondo: #ffffff;
   --blanco: #ffffff;
-  --texto: var(--azul-oxford);
+  --texto: #3a4060;                         /* texto de párrafo, como ujmd.edu.sv */
   --texto-suave: #545b78;
   --borde: #e1e5f0;
   --sombra: 0 2px 12px rgba(22, 24, 52, 0.08);
@@ -36,16 +36,19 @@
 
 html { scroll-behavior: smooth; }
 
+/* Tipografía como ujmd.edu.sv: Montserrat en títulos, Red Hat Display en texto */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Red Hat Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 500;
   background: var(--fondo);
   color: var(--texto);
   line-height: 1.65;
 }
+h1, h2, h3, h4, .seccion-titulo { font-family: 'Montserrat', 'Red Hat Display', sans-serif; color: var(--azul-oxford); }
 
 img { max-width: 100%; display: block; }
 
-a { color: var(--azul-persia); }
+a { color: var(--azul-neon); }
 
 .contenedor {
   max-width: 1080px;
@@ -55,14 +58,14 @@ a { color: var(--azul-persia); }
 
 /* ---------- Barra superior de aviso ---------- */
 .aviso-superior {
-  background: var(--amarillo);
-  color: var(--azul-oxford);
+  background: var(--azul-oxford);
+  color: var(--blanco);
   font-size: 0.85rem;
   font-weight: 500;
   text-align: center;
-  padding: 8px 16px;
+  padding: 9px 16px;
 }
-.aviso-superior a { color: var(--azul-oxford); font-weight: 700; text-decoration: underline; }
+.aviso-superior a { color: var(--amarillo); font-weight: 700; text-decoration: underline; }
 
 /* ---------- Header / Navegación ---------- */
 .header {
@@ -116,7 +119,7 @@ a { color: var(--azul-persia); }
 .menu a {
   display: block;
   padding: 8px 14px;
-  border-radius: 8px;
+  border-radius: 50px;
   text-decoration: none;
   color: var(--texto);
   font-size: 0.92rem;
@@ -146,22 +149,39 @@ a { color: var(--azul-persia); }
   position: relative;
   overflow: hidden;
 }
-.hero::after {
-  content: "";
-  position: absolute;
-  right: -80px;
-  top: -80px;
-  width: 340px;
-  height: 340px;
-  border-radius: 50%;
-  background: rgba(49, 100, 178, 0.35); /* Azul Zafiro */
-}
 .hero::before {
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: 0;
   height: 6px;
   background: var(--amarillo);
+  z-index: 2;
+}
+.hero h1 { color: var(--blanco); font-weight: 600; }
+
+/* Fotos en transparencia sobre el cintillo azul (las inserta plantilla.js).
+   Van en escala de grises y mezcladas con el azul; encima, un degradado
+   más oscuro a la izquierda para que el texto se lea bien. */
+.hero-fotos {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  opacity: 0.42;
+  mix-blend-mode: luminosity;
+  pointer-events: none;
+}
+.hero-fotos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+}
+.hero-fotos::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(22,24,52,0.85) 0%, rgba(24,34,85,0.55) 50%, rgba(42,59,137,0.15) 100%);
 }
 .hero-contenido { max-width: 1080px; margin: 0 auto; position: relative; z-index: 1; }
 .hero .etiqueta {
@@ -188,8 +208,8 @@ a { color: var(--azul-persia); }
 /* ---------- Botones ---------- */
 .btn {
   display: inline-block;
-  padding: 12px 24px;
-  border-radius: 10px;
+  padding: 12px 26px;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
   font-size: 0.95rem;
@@ -204,7 +224,7 @@ a { color: var(--azul-persia); }
 .seccion { padding: 56px 0; }
 .seccion-titulo {
   font-size: 1.6rem;
-  color: var(--azul-navy);
+  font-weight: 600;
   margin-bottom: 8px;
 }
 .seccion-sub { color: var(--texto-suave); margin-bottom: 32px; max-width: 680px; }
@@ -241,7 +261,7 @@ a { color: var(--azul-persia); }
 }
 .tarjeta h3 { color: var(--azul-navy); font-size: 1.05rem; margin-bottom: 8px; }
 .tarjeta p { font-size: 0.92rem; color: var(--texto-suave); margin-bottom: 14px; }
-.tarjeta .enlace { font-weight: 700; text-decoration: none; font-size: 0.92rem; color: var(--azul-persia); }
+.tarjeta .enlace { font-weight: 700; text-decoration: none; font-size: 0.92rem; color: var(--azul-neon); }
 .tarjeta .enlace:hover { text-decoration: underline; }
 
 a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
@@ -451,7 +471,7 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
   border-bottom: 4px solid var(--amarillo);
 }
 .fecha-item .fecha-dia {
-  font-family: 'Poppins', 'Inter', sans-serif;
+  font-family: 'Montserrat', 'Red Hat Display', sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
   color: var(--amarillo);
@@ -568,6 +588,7 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
   }
   .menu.abierto { display: flex; }
   .hero { padding: 52px 24px; }
+  .hero-fotos { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 480px) {
