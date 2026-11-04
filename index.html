@@ -8,28 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="ciclo.js"></script>
+  <script src="plantilla.js"></script>
 </head>
 <body>
 
-  <div class="aviso-superior">
-    ¿Problemas con tu inscripción? Escribe a <a href="mailto:arquitectura@ujmd.edu.sv">arquitectura@ujmd.edu.sv</a>
-  </div>
-
-  <header class="header">
-    <nav class="nav">
-      <a href="index.html" class="logo" aria-label="EArq — Escuela de Arquitectura UJMD">
-        <span class="logo-cut"><img src="LOGO%20EARQ-UJMD-01.png" alt="EArq — Escuela de Arquitectura UJMD"></span>
-      </a>
-      <button class="btn-menu" aria-label="Abrir menú">☰</button>
-      <ul class="menu">
-        <li><a href="index.html" class="activo">Inicio</a></li>
-        <li><a href="recomendaciones.html">Recomendaciones</a></li>
-        <li><a href="instrucciones.html">Instrucciones</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="https://www.ujmd.edu.sv/" target="_blank" rel="noopener" class="externo">UJMD ↗</a></li>
-      </ul>
-    </nav>
-  </header>
+  <sitio-encabezado activo="index"></sitio-encabezado>
 
   <section class="hero">
     <div class="hero-contenido">
@@ -37,55 +21,42 @@
       <h1>Todo lo que necesitas para tu inscripción</h1>
       <p>En este sitio encontrarás la información necesaria para tu inscripción de este ciclo. Te recomendamos comenzar verificando los horarios y grupos disponibles.</p>
       <div class="hero-botones">
-        <a class="btn btn-amarillo" href="https://drive.google.com/open?id=1923eWimsNDPZbsRJVhP5gRsiucGjTOb5" target="_blank" rel="noopener">Ver horarios 2018/2023</a>
-        <a class="btn btn-claro" href="https://drive.google.com/open?id=1y3ivrCp_7fT7D3oIXPWiKIe9DtbUjibN" target="_blank" rel="noopener">Listado de asignaturas</a>
+        <a class="btn btn-amarillo" href="#" data-ciclo-href="enlaces.horarios" data-ciclo="textoBotonHorarios" target="_blank" rel="noopener"></a>
+        <a class="btn btn-claro" href="#" data-ciclo-href="enlaces.listadoAsignaturas" target="_blank" rel="noopener">Listado de asignaturas</a>
         <a class="btn btn-claro" href="instrucciones.html">Cómo inscribirse en línea</a>
       </div>
 
-      <!-- Nuevo recurso: hoja interactiva de horarios. Edita la fecha de actualización aquí abajo. -->
-      <div style="margin-top:24px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,194,14,0.55); border-radius:12px; padding:16px 20px; max-width:620px;">
-        <span style="background:var(--amarillo); color:var(--gris-profundo); font-weight:700; font-size:0.72rem; letter-spacing:1px; text-transform:uppercase; padding:3px 10px; border-radius:999px;">Nuevo recurso</span>
-        <p style="margin:10px 0 4px; font-size:0.98rem;">
-          <a href="https://docs.google.com/spreadsheets/d/16tKmF9h26Kjmy846Naq4Z-XloA2qgfeH?rtpof=true&usp=drive_fs" target="_blank" rel="noopener" style="color:var(--amarillo); font-weight:700;">Hoja interactiva para armar tus alternativas de horario</a>
+      <!-- Hoja interactiva de horarios. El enlace y la fecha de actualización están en ciclo.js -->
+      <div class="recurso-destacado">
+        <span class="recurso-etiqueta">Nuevo recurso</span>
+        <p class="recurso-titulo">
+          <a href="#" data-ciclo-href="enlaces.hojaInteractiva" target="_blank" rel="noopener">Hoja interactiva para armar tus alternativas de horario</a>
         </p>
-        <p style="color:#cfcfcb; font-size:0.85rem; margin:0;">Debes descargarla para poder usarla en MS Excel. <em>Última actualización: 8/7/2026</em></p>
+        <p class="recurso-nota">Debes descargarla para poder usarla en MS Excel. <em>Última actualización: <span data-ciclo="ultimaActualizacion"></span></em></p>
       </div>
     </div>
   </section>
 
   <main>
     <!-- Aviso 3.ª matrícula -->
-    <section class="seccion" style="padding-bottom:0;">
+    <section class="seccion pb-0">
       <div class="contenedor">
-        <div class="alerta alerta-amarilla" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:0;">
-          <div style="flex:1; min-width:260px;">
+        <div class="alerta alerta-amarilla alerta-accion">
+          <div class="alerta-accion-texto">
             <strong>¿Inscribirás asignaturas en 3.ª matrícula?</strong>
-            <p>Descarga la carta de solicitud, llénala y envíala en formato PDF a <a href="mailto:arquitectura@ujmd.edu.sv">arquitectura@ujmd.edu.sv</a> a más tardar el jueves 9 de julio. Sin esta autorización no podrás inscribir.</p>
+            <p>Descarga la carta de solicitud, llénala y envíala en formato PDF a <a href="mailto:arquitectura@ujmd.edu.sv">arquitectura@ujmd.edu.sv</a> a más tardar el <span data-ciclo="fechaLimite3aMatricula"></span>. Sin esta autorización no podrás inscribir.</p>
           </div>
-          <a class="btn btn-oscuro" href="https://docs.google.com/document/d/1ooplPmo3fWcnGAQLoOipXJLfIvERY1R8" target="_blank" rel="noopener">Descargar formato</a>
+          <a class="btn btn-oscuro" href="#" data-ciclo-href="enlaces.formato3aMatricula" target="_blank" rel="noopener">Descargar formato</a>
         </div>
       </div>
     </section>
 
-    <!-- Fechas clave -->
-    <section class="seccion" style="padding-bottom:0;">
+    <!-- Fechas clave (se editan en ciclo.js) -->
+    <section class="seccion pb-0">
       <div class="contenedor">
-        <h2 class="seccion-titulo">Fechas clave del ciclo 02</h2>
+        <h2 class="seccion-titulo">Fechas clave del ciclo <span data-ciclo="numero"></span></h2>
         <div class="linea-acento"></div>
-        <div class="fechas">
-          <div class="fecha-item">
-            <div class="fecha-dia">Jueves 9 de julio</div>
-            <p>Fecha límite para presentar la solicitud de autorización de 3.ª matrícula.</p>
-          </div>
-          <div class="fecha-item">
-            <div class="fecha-dia">19, 20 y 21 de agosto</div>
-            <p>Período de retiro y adición. Plazo para inscribir la asignatura que requiere UV adicional (2.ª matrícula).</p>
-          </div>
-          <div class="fecha-item">
-            <div class="fecha-dia">Tu segmento</div>
-            <p>Consulta la fecha en que te corresponde inscribir en los <a href="https://www.ujmd.edu.sv/inscripcion-horario/arquitectura/" target="_blank" rel="noopener">horarios de inscripción</a>.</p>
-          </div>
-        </div>
+        <div class="fechas" data-ciclo-lista="fechas"></div>
       </div>
     </section>
 
@@ -107,7 +78,7 @@
             <p>Consulta el segmento y la fecha en que te corresponde inscribir.</p>
             <span class="enlace">Consultar →</span>
           </a>
-          <a class="tarjeta tarjeta-enlace" href="https://drive.google.com/open?id=1ztWR73ITUoLOF77Rh7TLZA5f2QSHo3m7" target="_blank" rel="noopener">
+          <a class="tarjeta tarjeta-enlace" href="#" data-ciclo-href="enlaces.calendarioAcademico" target="_blank" rel="noopener">
             <div class="icono">📅</div>
             <h3>Calendario académico</h3>
             <p>Fechas importantes del ciclo académico en curso.</p>
@@ -115,7 +86,7 @@
           </a>
           <a class="tarjeta tarjeta-enlace" href="recomendaciones.html">
             <div class="icono">💡</div>
-            <h3>Recomendaciones ciclo 02</h3>
+            <h3>Recomendaciones ciclo <span data-ciclo="numero"></span></h3>
             <p>Consideraciones de asignaturas y recomendaciones antes de inscribir.</p>
             <span class="enlace">Leer más →</span>
           </a>
@@ -125,7 +96,7 @@
     </section>
 
     <!-- Aclaraciones -->
-    <section class="seccion" style="padding-top:0;">
+    <section class="seccion pt-0">
       <div class="contenedor">
         <h2 class="seccion-titulo">Aclaraciones sobre los horarios</h2>
         <div class="linea-acento"></div>
@@ -145,36 +116,36 @@
     </section>
 
     <!-- Modalidad -->
-    <section class="seccion" style="padding-top:0;">
+    <section class="seccion pt-0">
       <div class="contenedor">
         <h2 class="seccion-titulo">Modalidad de estudio y evaluación</h2>
         <div class="linea-acento"></div>
-        <div class="tarjeta" style="max-width:none;">
-          <p style="font-size:0.95rem; color:var(--texto-suave); margin-bottom:14px;">La mayoría de asignaturas son <strong>semipresenciales</strong>: combinan horas presenciales <strong>(P)</strong>, que se desarrollan en el salón asignado dentro del horario de 6:20 a.m. – 9:00 p.m., y horas no presenciales <strong>(NP, B-learning)</strong>, con actividades asincrónicas semanales en Google Classroom® y sin sesiones de videollamada. El formato <strong>(V, E-learning)</strong> corresponde a clases por videollamada en Google Meet®: las asignaturas <strong>100% virtuales</strong> combinan estas sesiones sincrónicas con horas asincrónicas de trabajo en Google Classroom®. Verifica en la malla de horarios la modalidad (P, NP o V) que corresponde a cada hora clase.</p>
-          <p style="font-size:0.95rem; color:var(--texto-suave); margin-bottom:0;"><strong>Evaluación:</strong> en cada asignación revisa los criterios y parámetros que te permitan entender cómo o cuánto de una competencia se busca que exhibas.</p>
+        <div class="tarjeta tarjeta-ancha">
+          <p class="texto-modalidad">La mayoría de asignaturas son <strong>semipresenciales</strong>: combinan horas presenciales <strong>(P)</strong>, que se desarrollan en el salón asignado dentro del horario de 6:20 a.m. – 9:00 p.m., y horas no presenciales <strong>(NP, B-learning)</strong>, con actividades asincrónicas semanales en Google Classroom® y sin sesiones de videollamada. El formato <strong>(V, E-learning)</strong> corresponde a clases por videollamada en Google Meet®: las asignaturas <strong>100% virtuales</strong> combinan estas sesiones sincrónicas con horas asincrónicas de trabajo en Google Classroom®. Verifica en la malla de horarios la modalidad (P, NP o V) que corresponde a cada hora clase.</p>
+          <p class="texto-modalidad"><strong>Evaluación:</strong> en cada asignación revisa los criterios y parámetros que te permitan entender cómo o cuánto de una competencia se busca que exhibas.</p>
         </div>
       </div>
     </section>
 
     <!-- Mallas curriculares -->
-    <section class="seccion" style="padding-top:0;">
+    <section class="seccion pt-0">
       <div class="contenedor">
         <h2 class="seccion-titulo">Mallas curriculares</h2>
         <p class="seccion-sub">Consulta la malla curricular de tu Plan de Estudio:</p>
         <div class="tarjetas">
-          <a class="tarjeta tarjeta-enlace" href="https://drive.google.com/open?id=1e8xpUFCSqy_6aFLFYJ4rYyiDkTk_DrwK" target="_blank" rel="noopener">
+          <a class="tarjeta tarjeta-enlace" href="#" data-ciclo-href="enlaces.mallaAri2018" target="_blank" rel="noopener">
             <h3>Malla ARI 2018</h3>
             <p>Arquitectura de Interiores — Plan 2018</p>
           </a>
-          <a class="tarjeta tarjeta-enlace" href="https://drive.google.com/open?id=1e02tQdBMCcbCzEgWoytMqdnPlkGfabal" target="_blank" rel="noopener">
+          <a class="tarjeta tarjeta-enlace" href="#" data-ciclo-href="enlaces.mallaArq2018" target="_blank" rel="noopener">
             <h3>Malla ARQ 2018</h3>
             <p>Arquitectura — Plan 2018</p>
           </a>
-          <a class="tarjeta tarjeta-enlace" href="https://drive.google.com/open?id=1LbUfrU8d8MPIpe7XYC3Wa8VljsyWFBXw" target="_blank" rel="noopener">
+          <a class="tarjeta tarjeta-enlace" href="#" data-ciclo-href="enlaces.mallaAri2023" target="_blank" rel="noopener">
             <h3>Malla ARI 2023</h3>
             <p>Arquitectura de Interiores — Plan 2023</p>
           </a>
-          <a class="tarjeta tarjeta-enlace" href="https://drive.google.com/open?id=1LcKixuJLy1CkPlPRgVf4YlogJbpoIIKR" target="_blank" rel="noopener">
+          <a class="tarjeta tarjeta-enlace" href="#" data-ciclo-href="enlaces.mallaArq2023" target="_blank" rel="noopener">
             <h3>Malla ARQ 2023</h3>
             <p>Arquitectura — Plan 2023</p>
           </a>
@@ -183,7 +154,7 @@
     </section>
 
     <!-- Enlaces institucionales -->
-    <section class="seccion" style="padding-top:0;">
+    <section class="seccion pt-0">
       <div class="contenedor">
         <h2 class="seccion-titulo">Enlaces institucionales UJMD</h2>
         <p class="seccion-sub">Recursos de la Universidad Dr. José Matías Delgado que pueden ayudarte durante tu proceso:</p>
@@ -193,67 +164,27 @@
           <a class="enlace-ujmd" href="https://www.ujmd.edu.sv/calendario/" target="_blank" rel="noopener">Calendario institucional</a>
           <a class="enlace-ujmd" href="https://www.ujmd.edu.sv/avisos/" target="_blank" rel="noopener">Avisos UJMD</a>
           <a class="enlace-ujmd" href="https://www.ujmd.edu.sv/facultades/escuela-de-arquitectura/" target="_blank" rel="noopener">Escuela de Arquitectura</a>
-          <a class="enlace-ujmd" href="http://uvirtual.ujmd.edu.sv/" target="_blank" rel="noopener">UVirtual</a>
+          <a class="enlace-ujmd" href="https://uvirtual.ujmd.edu.sv/" target="_blank" rel="noopener">UVirtual</a>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="seccion" style="padding-top:0;">
+    <section class="seccion pt-0">
       <div class="contenedor">
         <div class="cta">
           <h2>¿Tienes problemas con tu inscripción?</h2>
           <p>Revisa primero las preguntas frecuentes. Si sigues teniendo problemas, llena el formulario para que te demos seguimiento.</p>
-          <div class="hero-botones" style="justify-content:center;">
+          <div class="hero-botones centrado">
             <a class="btn" href="faq.html">Ver preguntas frecuentes</a>
-            <a class="btn" href="https://forms.gle/niYX9DEPgqshswdW7" target="_blank" rel="noopener">Llenar formulario</a>
+            <a class="btn" href="#" data-ciclo-href="enlaces.formularioProblemas" target="_blank" rel="noopener">Llenar formulario</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="contenedor">
-      <div class="footer-grid">
-        <div>
-          <h4>Inscripción · Escuela de Arquitectura</h4>
-          <p>Universidad Dr. José Matías Delgado</p>
-        </div>
-        <div>
-          <h4>Navegación</h4>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="recomendaciones.html">Recomendaciones ciclo 02</a></li>
-            <li><a href="instrucciones.html">Instrucciones en línea</a></li>
-            <li><a href="faq.html">Preguntas frecuentes</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>UJMD</h4>
-          <ul>
-            <li><a href="https://www.ujmd.edu.sv/" target="_blank" rel="noopener">Sitio institucional</a></li>
-            <li><a href="https://www.ujmd.edu.sv/admisiones/" target="_blank" rel="noopener">Admisiones</a></li>
-            <li><a href="https://www.ujmd.edu.sv/aranceles/" target="_blank" rel="noopener">Aranceles</a></li>
-            <li><a href="https://www.ujmd.edu.sv/calendario/" target="_blank" rel="noopener">Calendario</a></li>
-            <li><a href="https://www.ujmd.edu.sv/avisos/" target="_blank" rel="noopener">Avisos</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contacto</h4>
-          <ul>
-            <li><a href="mailto:arquitectura@ujmd.edu.sv">arquitectura@ujmd.edu.sv</a></li>
-            <li><a href="tel:+50322129400">2212-9400 ext. 124</a></li>
-            <li><a href="https://www.ujmd.edu.sv/facultades/escuela-de-arquitectura/" target="_blank" rel="noopener">Escuela de Arquitectura</a></li>
-            <li><a href="http://uvirtual.ujmd.edu.sv/" target="_blank" rel="noopener">UVirtual</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-legal">© Escuela de Arquitectura UJMD — Sitio informativo de inscripción</div>
-    </div>
-  </footer>
-
-  <a class="btn-flotante" href="mailto:arquitectura@ujmd.edu.sv" title="Escríbenos: arquitectura@ujmd.edu.sv" aria-label="Contacto por correo">✉</a>
+  <sitio-pie></sitio-pie>
 
   <script src="script.js"></script>
 </body>

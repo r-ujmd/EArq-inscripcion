@@ -492,9 +492,51 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
 }
 .btn-flotante:hover { transform: scale(1.08); }
 
+/* ---------- Recurso destacado en el hero (hoja interactiva) ---------- */
+.recurso-destacado {
+  margin-top: 24px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,194,14,0.55);
+  border-radius: 12px;
+  padding: 16px 20px;
+  max-width: 620px;
+}
+.recurso-etiqueta {
+  background: var(--amarillo);
+  color: var(--gris-profundo);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.hero .recurso-titulo { margin: 10px 0 4px; font-size: 0.98rem; }
+.hero .recurso-titulo a { color: var(--amarillo); font-weight: 700; }
+.hero .recurso-nota { color: #cfcfcb; font-size: 0.85rem; margin: 0; }
+
+/* ---------- Alerta con botón de acción (aviso 3.ª matrícula) ---------- */
+.alerta-accion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+.alerta-accion-texto { flex: 1; min-width: 260px; }
+
+/* ---------- Tarjeta de texto ancha (modalidad) ---------- */
+.tarjeta-ancha { max-width: none; }
+.tarjeta .texto-modalidad { font-size: 0.95rem; color: var(--texto-suave); margin-bottom: 14px; }
+.tarjeta .texto-modalidad:last-child { margin-bottom: 0; }
+
 /* ---------- Utilidades ---------- */
 .nota { font-size: 0.85rem; color: var(--texto-suave); font-style: italic; margin-top: 12px; }
 .mt-32 { margin-top: 32px; }
+.pt-0 { padding-top: 0; }
+.pb-0 { padding-bottom: 0; }
+.hero-botones.centrado { justify-content: center; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 820px) {

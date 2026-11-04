@@ -8,28 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="ciclo.js"></script>
+  <script src="plantilla.js"></script>
 </head>
 <body>
 
-  <div class="aviso-superior">
-    ¿Problemas con tu inscripción? Escribe a <a href="mailto:arquitectura@ujmd.edu.sv">arquitectura@ujmd.edu.sv</a>
-  </div>
-
-  <header class="header">
-    <nav class="nav">
-      <a href="index.html" class="logo" aria-label="EArq — Escuela de Arquitectura UJMD">
-        <span class="logo-cut"><img src="LOGO%20EARQ-UJMD-01.png" alt="EArq — Escuela de Arquitectura UJMD"></span>
-      </a>
-      <button class="btn-menu" aria-label="Abrir menú">☰</button>
-      <ul class="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="recomendaciones.html">Recomendaciones</a></li>
-        <li><a href="instrucciones.html" class="activo">Instrucciones</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="https://www.ujmd.edu.sv/" target="_blank" rel="noopener" class="externo">UJMD ↗</a></li>
-      </ul>
-    </nav>
-  </header>
+  <sitio-encabezado activo="instrucciones"></sitio-encabezado>
 
   <section class="hero hero-interno">
     <div class="hero-contenido">
@@ -53,13 +37,13 @@
       </div>
     </section>
 
-    <section class="seccion" style="padding-top:0;">
+    <section class="seccion pt-0">
       <div class="contenedor">
         <h2 class="seccion-titulo">Pasos para inscribir</h2>
         <div class="linea-acento"></div>
         <ol class="lista-numerada">
-          <li>Consulta previamente los <a href="index.html">horarios de clases</a> disponibles en este sitio. Puedes utilizar la <a href="https://docs.google.com/document/d/15p5K80oAelcqt8tGNRQlPJ7tnhvFVyxe" target="_blank" rel="noopener">Hoja de asesoría para inscripción</a> y tener listas tus opciones de horario antes de inscribir.</li>
-          <li>Ingresa a <a href="http://uvirtual.ujmd.edu.sv/" target="_blank" rel="noopener">uvirtual.ujmd.edu.sv</a>.</li>
+          <li>Consulta previamente los <a href="index.html">horarios de clases</a> disponibles en este sitio. Puedes utilizar la <a href="#" data-ciclo-href="enlaces.hojaAsesoria" target="_blank" rel="noopener">Hoja de asesoría para inscripción</a> y tener listas tus opciones de horario antes de inscribir.</li>
+          <li>Ingresa a <a href="https://uvirtual.ujmd.edu.sv/" target="_blank" rel="noopener">uvirtual.ujmd.edu.sv</a>.</li>
           <li>Ingresa tus datos: el usuario es tu número de carné y la contraseña es la misma con la que ingresas a la UVirtual.</li>
           <li>Ingresa o actualiza tu correo electrónico activo para ser registrado en el sistema.</li>
           <li>Inicia sesión.</li>
@@ -71,7 +55,7 @@
       </div>
     </section>
 
-    <section class="seccion" style="padding-top:0;">
+    <section class="seccion pt-0">
       <div class="contenedor">
         <h2 class="seccion-titulo">Credenciales de acceso a UVirtual</h2>
         <div class="linea-acento"></div>
@@ -90,7 +74,7 @@
       </div>
     </section>
 
-    <section class="seccion" style="padding-top:0;">
+    <section class="seccion pt-0">
       <div class="contenedor">
         <h2 class="seccion-titulo">Número de asignaturas a inscribir</h2>
         <div class="linea-acento"></div>
@@ -102,47 +86,7 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="contenedor">
-      <div class="footer-grid">
-        <div>
-          <h4>Inscripción · Escuela de Arquitectura</h4>
-          <p>Universidad Dr. José Matías Delgado</p>
-        </div>
-        <div>
-          <h4>Navegación</h4>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="recomendaciones.html">Recomendaciones ciclo 02</a></li>
-            <li><a href="instrucciones.html">Instrucciones en línea</a></li>
-            <li><a href="faq.html">Preguntas frecuentes</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>UJMD</h4>
-          <ul>
-            <li><a href="https://www.ujmd.edu.sv/" target="_blank" rel="noopener">Sitio institucional</a></li>
-            <li><a href="https://www.ujmd.edu.sv/admisiones/" target="_blank" rel="noopener">Admisiones</a></li>
-            <li><a href="https://www.ujmd.edu.sv/aranceles/" target="_blank" rel="noopener">Aranceles</a></li>
-            <li><a href="https://www.ujmd.edu.sv/calendario/" target="_blank" rel="noopener">Calendario</a></li>
-            <li><a href="https://www.ujmd.edu.sv/avisos/" target="_blank" rel="noopener">Avisos</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contacto</h4>
-          <ul>
-            <li><a href="mailto:arquitectura@ujmd.edu.sv">arquitectura@ujmd.edu.sv</a></li>
-            <li><a href="tel:+50322129400">2212-9400 ext. 124</a></li>
-            <li><a href="https://www.ujmd.edu.sv/facultades/escuela-de-arquitectura/" target="_blank" rel="noopener">Escuela de Arquitectura</a></li>
-            <li><a href="http://uvirtual.ujmd.edu.sv/" target="_blank" rel="noopener">UVirtual</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-legal">© Escuela de Arquitectura UJMD — Sitio informativo de inscripción</div>
-    </div>
-  </footer>
-
-  <a class="btn-flotante" href="mailto:arquitectura@ujmd.edu.sv" title="Escríbenos: arquitectura@ujmd.edu.sv" aria-label="Contacto por correo">✉</a>
+  <sitio-pie></sitio-pie>
 
   <script src="script.js"></script>
 </body>
