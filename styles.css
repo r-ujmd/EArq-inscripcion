@@ -1,7 +1,8 @@
 /* ============================================
    Sitio de Inscripción — Escuela de Arquitectura UJMD
    Paleta cromática complementaria UJMD
-   (Manual de Marca UJMD, p. 48)
+   (Manual de Marca UJMD, p. 48) + acentos celeste
+   y azul vivo de ujmd.edu.sv
    ============================================ */
 
 :root {
@@ -15,20 +16,25 @@
   --azul-oxford: #161834;     /* Azul Oxford */
   --negro: #000000;           /* Negro */
 
+  /* Acentos vivos que usa ujmd.edu.sv */
+  --celeste: #2ea3f2;         /* celeste del sitio institucional */
+  --azul-vivo: #1959ff;
+  --celeste-suave: #e8f5fe;   /* fondos suaves (hover, íconos) */
+
   /* Derivados para uso en pantalla */
   --amarillo-oscuro: #d99b00;               /* amarillo para íconos sobre blanco */
   --amarillo-suave: #fff4d6;                /* fondos suaves (hover, íconos) */
   --amarillo-texto-cta: #3d2c00;            /* texto secundario sobre amarillo */
-  --texto-sobre-oscuro: #c9cfe6;            /* párrafos sobre Navy/Oxford */
+  --texto-sobre-oscuro: #e6eeff;            /* párrafos sobre el azul del cintillo */
   --texto-pie: #b3b9d6;                     /* enlaces del pie */
   --texto-pie-legal: #7f86a8;
   --fondo: #ffffff;
   --blanco: #ffffff;
   --texto: #3a4060;                         /* texto de párrafo, como ujmd.edu.sv */
   --texto-suave: #545b78;
-  --borde: #e1e5f0;
-  --sombra: 0 2px 12px rgba(22, 24, 52, 0.08);
-  --sombra-hover: 0 8px 24px rgba(22, 24, 52, 0.18);
+  --borde: #e3e6ef;                         /* bordes como ujmd.edu.sv */
+  --sombra: 0 2px 10px rgba(22, 24, 52, 0.06);
+  --sombra-hover: 0 10px 26px rgba(0, 67, 255, 0.16);
   --radio: 12px;
 }
 
@@ -126,7 +132,7 @@ a { color: var(--azul-neon); }
   font-weight: 500;
   transition: background 0.15s, color 0.15s;
 }
-.menu a:hover { background: var(--amarillo-suave); }
+.menu a:hover { background: var(--celeste-suave); color: var(--azul-neon); }
 .menu a.activo { background: var(--amarillo); color: var(--azul-oxford); font-weight: 700; }
 .menu a.externo { color: var(--texto-suave); }
 
@@ -143,7 +149,7 @@ a { color: var(--azul-neon); }
 
 /* ---------- Hero ---------- */
 .hero {
-  background: linear-gradient(135deg, var(--azul-cobalto) 0%, var(--azul-navy) 55%, var(--azul-oxford) 100%);
+  background: linear-gradient(120deg, var(--azul-neon) 0%, var(--azul-vivo) 45%, var(--celeste) 100%);
   color: #fff;
   padding: 72px 24px;
   position: relative;
@@ -167,7 +173,7 @@ a { color: var(--azul-neon); }
   inset: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  opacity: 0.42;
+  opacity: 0.5;
   mix-blend-mode: luminosity;
   pointer-events: none;
 }
@@ -181,9 +187,10 @@ a { color: var(--azul-neon); }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(22,24,52,0.85) 0%, rgba(24,34,85,0.55) 50%, rgba(42,59,137,0.15) 100%);
+  background: linear-gradient(90deg, rgba(0,40,190,0.6) 0%, rgba(0,67,255,0.25) 55%, rgba(46,163,242,0) 100%);
 }
 .hero-contenido { max-width: 1080px; margin: 0 auto; position: relative; z-index: 1; }
+.hero h1, .hero p { text-shadow: 0 1px 3px rgba(0, 30, 120, 0.35); }
 .hero .etiqueta {
   display: inline-block;
   background: var(--amarillo);
@@ -217,8 +224,8 @@ a { color: var(--azul-neon); }
 }
 .btn:hover { transform: translateY(-2px); box-shadow: var(--sombra-hover); }
 .btn-amarillo { background: var(--amarillo); color: var(--azul-oxford); }
-.btn-claro { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
-.btn-oscuro { background: var(--azul-navy); color: #fff; }
+.btn-claro { background: rgba(255,255,255,0.14); color: #fff; border: 1px solid rgba(255,255,255,0.6); }
+.btn-oscuro { background: var(--azul-neon); color: #fff; }
 
 /* ---------- Secciones ---------- */
 .seccion { padding: 56px 0; }
@@ -230,7 +237,7 @@ a { color: var(--azul-neon); }
 .seccion-sub { color: var(--texto-suave); margin-bottom: 32px; max-width: 680px; }
 .linea-acento {
   width: 56px; height: 4px;
-  background: var(--amarillo);
+  background: linear-gradient(90deg, var(--azul-neon), var(--celeste));
   border-radius: 2px;
   margin: 12px 0 24px;
 }
@@ -244,7 +251,7 @@ a { color: var(--azul-neon); }
 .tarjeta {
   background: var(--blanco);
   border: 1px solid var(--borde);
-  border-top: 4px solid var(--amarillo);
+  border-top: 4px solid var(--celeste);
   border-radius: var(--radio);
   padding: 26px;
   box-shadow: var(--sombra);
@@ -254,7 +261,7 @@ a { color: var(--azul-neon); }
 .tarjeta .icono {
   width: 46px; height: 46px;
   border-radius: 10px;
-  background: var(--amarillo-suave);
+  background: var(--celeste-suave);
   display: flex; align-items: center; justify-content: center;
   font-size: 1.3rem;
   margin-bottom: 14px;
@@ -278,7 +285,7 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
 .alerta strong { display: block; margin-bottom: 4px; color: var(--azul-navy); }
 .alerta p { font-size: 0.94rem; color: var(--texto-suave); }
 .alerta-amarilla { border-color: var(--amarillo); }
-.alerta-gris { border-color: var(--azul-zafiro); }
+.alerta-gris { border-color: var(--celeste); }
 
 /* ---------- Listas ---------- */
 .lista-check { list-style: none; }
@@ -315,8 +322,8 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
   left: 0; top: 12px;
   width: 34px; height: 34px;
   border-radius: 50%;
-  background: var(--azul-navy);
-  color: var(--amarillo);
+  background: var(--azul-neon);
+  color: var(--blanco);
   font-weight: 700;
   display: flex; align-items: center; justify-content: center;
   font-size: 0.9rem;
@@ -331,7 +338,7 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
   box-shadow: var(--sombra);
   overflow: hidden;
 }
-.acordeon-item.abierto { border-left: 5px solid var(--amarillo); }
+.acordeon-item.abierto { border-left: 5px solid var(--celeste); }
 .acordeon-boton {
   width: 100%;
   background: none;
@@ -351,7 +358,7 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
 .acordeon-boton::after {
   content: "+";
   font-size: 1.4rem;
-  color: var(--amarillo-oscuro);
+  color: var(--azul-neon);
   transition: transform 0.2s;
   flex-shrink: 0;
 }
@@ -413,9 +420,9 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
 .enlace-ujmd:hover {
   transform: translateY(-2px);
   box-shadow: var(--sombra-hover);
-  border-color: var(--amarillo);
+  border-color: var(--celeste);
 }
-.enlace-ujmd::before { content: "↗"; color: var(--amarillo-oscuro); font-weight: 700; }
+.enlace-ujmd::before { content: "↗"; color: var(--celeste); font-weight: 700; }
 
 /* ---------- CTA final ---------- */
 .cta {
@@ -436,7 +443,7 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
   margin-top: 56px;
   padding: 40px 0 24px;
   font-size: 0.9rem;
-  border-top: 6px solid var(--amarillo);
+  border-top: 6px solid var(--celeste);
 }
 .footer-grid {
   display: grid;
@@ -464,21 +471,22 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
   gap: 20px;
 }
 .fecha-item {
-  background: var(--azul-navy);
-  color: #fff;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-top: 4px solid var(--azul-neon);
   border-radius: var(--radio);
   padding: 24px;
-  border-bottom: 4px solid var(--amarillo);
+  box-shadow: var(--sombra);
 }
 .fecha-item .fecha-dia {
   font-family: 'Montserrat', 'Red Hat Display', sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--amarillo);
+  color: var(--azul-neon);
   margin-bottom: 6px;
 }
-.fecha-item p { color: var(--texto-sobre-oscuro); font-size: 0.92rem; }
-.fecha-item a { color: var(--amarillo); }
+.fecha-item p { color: var(--texto-suave); font-size: 0.92rem; }
+.fecha-item a { color: var(--azul-neon); }
 
 /* ---------- Buscador FAQ ---------- */
 .buscador { margin-bottom: 24px; }
@@ -493,8 +501,8 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
 }
 .buscador input:focus {
   outline: none;
-  border-color: var(--amarillo);
-  box-shadow: 0 0 0 3px rgba(255, 182, 0, 0.4);
+  border-color: var(--celeste);
+  box-shadow: 0 0 0 3px rgba(46, 163, 242, 0.3);
 }
 .sin-resultados {
   display: none;
@@ -527,8 +535,10 @@ a.tarjeta-enlace { text-decoration: none; color: inherit; display: block; }
 /* ---------- Recurso destacado en el hero (hoja interactiva) ---------- */
 .recurso-destacado {
   margin-top: 24px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,182,0,0.55);
+  background: rgba(0, 50, 200, 0.35);
+  border: 1px solid rgba(255,255,255,0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-radius: 12px;
   padding: 16px 20px;
   max-width: 620px;

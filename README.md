@@ -1,6 +1,6 @@
 # Sitio de Inscripción — Escuela de Arquitectura UJMD
 
-Sitio estático (HTML/CSS/JS puro, sin compilación) con la paleta cromática complementaria de la UJMD: azules Navy/Oxford, amarillo UJMD y blanco. Publicado con GitHub Pages: https://r-ujmd.github.io/EArq-inscripcion/
+Sitio estático (HTML/CSS/JS puro, sin compilación) con la paleta cromática complementaria de la UJMD: predominio de blanco, azul neón y celeste, amarillo UJMD y Oxford en la barra superior y el pie. Publicado con GitHub Pages: https://r-ujmd.github.io/EArq-inscripcion/
 
 ## Archivos
 
@@ -61,7 +61,7 @@ Haz commit y push a `main`, o desde GitHub: Add file → Upload files → arrast
 
 ## Personalización
 
-- **Colores:** variables al inicio de `styles.css`, con la paleta cromática complementaria del Manual de Marca UJMD: Amarillo UJMD `#FFB600`, Azul Neón `#0043FF`, Zafiro `#3164B2`, Persia `#2F4BA3`, Cobalto `#2A3B89`, Navy `#182255`, Oxford `#161834` y Negro. Debajo están los tonos derivados para texto y fondos.
+- **Colores:** variables al inicio de `styles.css`, con la paleta cromática complementaria del Manual de Marca UJMD: Amarillo UJMD `#FFB600`, Azul Neón `#0043FF`, Zafiro `#3164B2`, Persia `#2F4BA3`, Cobalto `#2A3B89`, Navy `#182255`, Oxford `#161834` y Negro. Además, los acentos vivos del sitio institucional ujmd.edu.sv: celeste `#2EA3F2` y azul vivo `#1959FF`. Debajo están los tonos derivados para texto y fondos.
 - **Tipografía:** Montserrat en títulos y Red Hat Display en texto (Google Fonts), igual que ujmd.edu.sv.
 - **Fotos del cintillo:** para cambiarlas, reemplaza los archivos en `img/` con el mismo nombre (o edita la lista `FOTOS` en `plantilla.js`). Se muestran en escala de grises mezcladas con el azul; la intensidad se ajusta con `opacity` en `.hero-fotos` (`styles.css`).
 - **Logo:** `logo-ujmd-earq.webp`, recortado con la clase `.logo-cut` en `styles.css` (la imagen tiene márgenes transparentes; los porcentajes muestran solo el área visible, y en pantallas de 480 px o menos se reduce). Si cambias la imagen, ajusta esos valores y el nombre del archivo en `plantilla.js`.
