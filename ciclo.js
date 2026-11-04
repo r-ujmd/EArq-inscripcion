@@ -11,14 +11,14 @@ window.CICLO = {
   // Número de ciclo tal como se muestra: "Fechas clave del ciclo 01-2027", "Ciclo 01-2027"…
   numero: '01-2027',
 
-  // ⚠ PENDIENTE 01-2027: las fechas y enlaces de abajo siguen siendo los del ciclo 02-2026.
-  //   Reemplázalos con los del nuevo ciclo antes de publicar.
+  // ⚠ PENDIENTE 01-2027: "ultimaActualizacion", los enlaces y los avisos de asignaturas
+  //   siguen siendo los del ciclo 02-2026. Reemplázalos cuando estén listos.
 
   // Fecha que aparece en "Última actualización" de la hoja interactiva de horarios
   ultimaActualizacion: '8/7/2026',
 
   // Fecha límite para solicitar autorización de 3.ª matrícula (se usa dentro de oraciones)
-  fechaLimite3aMatricula: 'jueves 9 de julio',
+  fechaLimite3aMatricula: 'miércoles 6 de enero',
 
   // Texto del botón principal de horarios en la portada
   textoBotonHorarios: 'Ver horarios 2018/2023',
@@ -43,11 +43,11 @@ window.CICLO = {
   // dia: texto grande en amarillo · texto: descripción (HTML)
   fechas: [
     {
-      dia: 'Jueves 9 de julio',
+      dia: 'Miércoles 6 de enero',
       texto: 'Fecha límite para presentar la solicitud de autorización de 3.ª matrícula.'
     },
     {
-      dia: '19, 20 y 21 de agosto',
+      dia: 'Por definir',
       texto: 'Período de retiro y adición. Plazo para inscribir la asignatura que requiere UV adicional (2.ª matrícula).'
     },
     {
