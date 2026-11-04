@@ -22,7 +22,7 @@
 
   var PAGINAS = [
     { id: 'index',           url: 'index.html',           menu: 'Inicio',          pie: 'Inicio' },
-    { id: 'recomendaciones', url: 'recomendaciones.html', menu: 'Recomendaciones', pie: 'Recomendaciones ciclo ' + C.numero },
+    { id: 'recomendaciones', url: 'recomendaciones.html', menu: 'Recomendaciones', pie: 'Recomendaciones ciclo <span data-ciclo="numero">' + C.numero + '</span>' },
     { id: 'instrucciones',   url: 'instrucciones.html',   menu: 'Instrucciones',   pie: 'Instrucciones en línea' },
     { id: 'faq',             url: 'faq.html',             menu: 'FAQ',             pie: 'Preguntas frecuentes' }
   ];
@@ -42,8 +42,8 @@
       '</div>' +
       '<header class="header">' +
         '<nav class="nav">' +
-          '<a href="index.html" class="logo" aria-label="EArq — Escuela de Arquitectura UJMD">' +
-            '<span class="logo-cut"><img src="logo-earq-ujmd.png" alt="EArq — Escuela de Arquitectura UJMD"></span>' +
+          '<a href="index.html" class="logo" aria-label="Universidad Dr. José Matías Delgado — Escuela de Arquitectura">' +
+            '<span class="logo-cut"><img src="logo-ujmd-earq.webp" alt="Universidad Dr. José Matías Delgado — Escuela de Arquitectura"></span>' +
           '</a>' +
           '<button class="btn-menu" aria-label="Abrir menú">☰</button>' +
           '<ul class="menu">' + menu +
@@ -112,8 +112,8 @@
   function aplicarCiclo() {
     // Título y descripción de la pestaña: actualiza "ciclo NN" con el número de ciclo.js
     var desc = document.querySelector('meta[name="description"]');
-    document.title = document.title.replace(/ciclo \d+/i, 'ciclo ' + C.numero);
-    if (desc) desc.content = desc.content.replace(/ciclo \d+/i, 'ciclo ' + C.numero);
+    document.title = document.title.replace(/ciclo [\d-]+/i, 'ciclo ' + C.numero);
+    if (desc) desc.content = desc.content.replace(/ciclo [\d-]+/i, 'ciclo ' + C.numero);
 
     document.querySelectorAll('[data-ciclo]').forEach(function (el) {
       var v = valor(el.dataset.ciclo);

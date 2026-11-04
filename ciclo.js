@@ -8,8 +8,11 @@
 
 window.CICLO = {
 
-  // Número de ciclo tal como se muestra: "Fechas clave del ciclo 02", "Ciclo 02"…
-  numero: '02',
+  // Número de ciclo tal como se muestra: "Fechas clave del ciclo 01-2027", "Ciclo 01-2027"…
+  numero: '01-2027',
+
+  // ⚠ PENDIENTE 01-2027: las fechas y enlaces de abajo siguen siendo los del ciclo 02-2026.
+  //   Reemplázalos con los del nuevo ciclo antes de publicar.
 
   // Fecha que aparece en "Última actualización" de la hoja interactiva de horarios
   ultimaActualizacion: '8/7/2026',

@@ -1,6 +1,6 @@
 # Sitio de Inscripción — Escuela de Arquitectura UJMD
 
-Sitio estático (HTML/CSS/JS puro, sin compilación) con la paleta de la EArq: gris oscuro, blanco y amarillo. Publicado con GitHub Pages: https://r-ujmd.github.io/EArq-inscripcion/
+Sitio estático (HTML/CSS/JS puro, sin compilación) con la paleta cromática complementaria de la UJMD: azules Navy/Oxford, amarillo UJMD y blanco. Publicado con GitHub Pages: https://r-ujmd.github.io/EArq-inscripcion/
 
 ## Archivos
 
@@ -14,7 +14,7 @@ Sitio estático (HTML/CSS/JS puro, sin compilación) con la paleta de la EArq: g
 | `faq.html` | Preguntas frecuentes (acordeón con buscador) |
 | `styles.css` | Todos los estilos (las páginas no llevan estilos en línea) |
 | `script.js` | Menú móvil, buscador y acordeón de la FAQ |
-| `logo-earq-ujmd.png` | Logo oficial EArq-UJMD |
+| `logo-ujmd-earq.webp` | Logo UJMD — Escuela de Arquitectura |
 
 ## Actualizar para un nuevo ciclo
 
@@ -60,6 +60,6 @@ Haz commit y push a `main`, o desde GitHub: Add file → Upload files → arrast
 
 ## Personalización
 
-- **Colores:** variables al inicio de `styles.css` (`--gris`, `--amarillo`, etc.).
-- **Logo:** `logo-earq-ujmd.png`, recortado con la clase `.logo-cut` en `styles.css` (el PNG tiene márgenes transparentes; los porcentajes muestran solo el área visible). Si cambias la imagen, ajusta esos valores y el nombre del archivo en `plantilla.js`.
+- **Colores:** variables al inicio de `styles.css`, con la paleta cromática complementaria del Manual de Marca UJMD: Amarillo UJMD `#FFB600`, Azul Neón `#0043FF`, Zafiro `#3164B2`, Persia `#2F4BA3`, Cobalto `#2A3B89`, Navy `#182255`, Oxford `#161834` y Negro. Debajo están los tonos derivados para texto y fondos.
+- **Logo:** `logo-ujmd-earq.webp`, recortado con la clase `.logo-cut` en `styles.css` (la imagen tiene márgenes transparentes; los porcentajes muestran solo el área visible, y en pantallas de 480 px o menos se reduce). Si cambias la imagen, ajusta esos valores y el nombre del archivo en `plantilla.js`.
 - El enlace “Listado de asignaturas y grupos” del sitio original estaba roto, por eso no aparece aquí.
